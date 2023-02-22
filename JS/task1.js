@@ -10,11 +10,13 @@ function returnDifference(arr) {
   if (arr.length <= 1) {
     return console.log(0);
   }
+
   const sortArr = arr.sort();
   const maxNub = arr[0];
   const minNub = arr[arr.length - 1];
   const difference = Math.abs(maxNub - minNub);
-  return console.log(difference);
+
+  return difference;
 }
 
 returnDifference([1, 2, 3, -4]);
