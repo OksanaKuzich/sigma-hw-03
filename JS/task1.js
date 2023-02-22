@@ -19,4 +19,4 @@ function returnDifference(arr) {
   return difference;
 }
 
-returnDifference([1, 2, 3, -4]);
+console.log(returnDifference([1, 2, 3, -4]));

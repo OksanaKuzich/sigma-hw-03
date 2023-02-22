@@ -8,4 +8,4 @@ function wordsLength(string, number) {
   return wordsLength;
 }
 
-wordsLength("I will be happy and strong", 4);
+console.log(wordsLength("I will be happy and strong", 4));
