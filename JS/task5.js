@@ -4,23 +4,21 @@
 // countVowels("Celebration") ➞ 5
 // countVowels("Palm") ➞ 1
 
-// function countVowels(word) {
-//   const vowels = ["a", "e", "i", "o", "u"];
-//   const letters = word.split("");
+function countVowels(word) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  const letters = word.split("");
 
-//   console.log(letters);
+  const counter = letters.reduce((acc, element, array) => {
+    if (vowels.includes(element)) {
+      acc += 1;
+    }
+    return acc;
+  }, 0);
 
-//   const counter = letters.reduce((acc, element, array) => {
-//     if (vowels.includes(element)) {
-//       acc += 1;
-//     }
-//     return acc;
-//   }, 0);
+  return counter;
+}
 
-//   return counter;
-// }
-
-// console.log(countVowels("Palm"));
+console.log(countVowels("Palm"));
 
 // Створіть функцію, яка видаляє літери "a", "b" і "c" з цього рядка і поверне
 // змінену версію. Якщо цей рядок не містить "a", "b" або "c", повернути null.
