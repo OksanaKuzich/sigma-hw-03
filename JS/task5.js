@@ -8,7 +8,7 @@ function countVowels(word) {
   const vowels = ["a", "e", "i", "o", "u"];
   const letters = word.split("");
 
-  const counter = letters.reduce((acc, element, array) => {
+  const counter = letters.reduce((acc, element) => {
     if (vowels.includes(element)) {
       acc += 1;
     }
