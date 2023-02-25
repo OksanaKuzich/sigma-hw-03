@@ -41,14 +41,14 @@ console.log(sentence(str));
 
 const resultFunc = sentence(str);
 
-// const alertHelp = setInterval(function () {
-//   alert("Do you need help?");
-// }, 5000);
+const alertHelp = setInterval(function () {
+  alert("Do you need help?");
+}, 5000);
 
-// function helper(str, resultFunc) {
-//   if (str.length > resultFunc.length) {
-//     alertHelp;
-//   }
-// }
+function helper(str, resultFunc) {
+  if (str.length > resultFunc.length) {
+    alertHelp;
+  }
+}
 
-// helper(str, resultFunc);
+helper(str, resultFunc);
