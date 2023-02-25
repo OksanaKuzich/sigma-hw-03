@@ -6,36 +6,36 @@
 
 // NATIVE
 
-// function averages(arr) {
-//   const averagesArr = arr.reduce((acc, element, index, array) => {
-//     if (index !== array.length - 1) {
-//       acc.push((element + array[index + 1]) / 2);
-//     }
-//     return acc;
-//   }, []);
-
-//   return averagesArr;
-// }
-
-// console.log(averages([1, 3, 5, 1, -10]));
-
-// LODASH
-
-let _ = require("lodash");
-
 function averages(arr) {
-  const averagesArr = _.reduce(
-    arr,
-    function (acc, element, index, array) {
-      if (index !== array.length - 1) {
-        acc.push((element + array[index + 1]) / 2);
-      }
-      return acc;
-    },
-    []
-  );
+  const averagesArr = arr.reduce((acc, element, index, array) => {
+    if (index !== array.length - 1) {
+      acc.push((element + array[index + 1]) / 2);
+    }
+    return acc;
+  }, []);
 
   return averagesArr;
 }
 
 console.log(averages([1, 3, 5, 1, -10]));
+
+// LODASH
+
+// let _ = require("lodash");
+
+// function averages(arr) {
+//   const averagesArr = _.reduce(
+//     arr,
+//     function (acc, element, index, array) {
+//       if (index !== array.length - 1) {
+//         acc.push((element + array[index + 1]) / 2);
+//       }
+//       return acc;
+//     },
+//     []
+//   );
+
+//   return averagesArr;
+// }
+
+// console.log(averages([1, 3, 5, 1, -10]));
