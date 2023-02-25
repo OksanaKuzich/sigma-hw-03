@@ -10,7 +10,7 @@ function password() {
   const signs = "_";
 
   const lengthPass = Math.floor(Math.random() * (20 - 6)) + 6;
-  const lengthNumb = (lengthPass * 0.25).toFixed(0);
+  let lengthNumb = (lengthPass * 0.25).toFixed(0);
   const lengthaABC = lengthPass - lengthNumb - 3;
 
   for (let i = 0; i < lengthaABC; i++) {
@@ -20,24 +20,27 @@ function password() {
   for (let i = 0; i < 2; i++) {
     password += abcUpp[Math.floor(Math.random() * abcUpp.length)];
   }
-
-  for (let i = 0; i < lengthNumb; i++) {
-    password += number[Math.floor(Math.random() * number.length)];
-  }
-
   password += signs;
 
   const arrPass = password.split("");
-  
+
   for (let i = arrPass.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     let tmp = arrPass[i];
     arrPass[i] = arrPass[j];
     arrPass[j] = tmp;
   }
+  const passwordArray = [];
 
-  password = arrPass.join("");
+  for (let i = 0; i < arrPass.length; i++) {
+    passwordArray.push(arrPass[i]);
+    if (lengthNumb > 0 && i % 2 === 0) {
+      lengthNumb -= 1;
+      passwordArray.push(number[Math.floor(Math.random() * number.length)]);
+    }
+  }
 
+  password = passwordArray.join("");
   return password;
 }
 
