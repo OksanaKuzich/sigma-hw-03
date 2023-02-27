@@ -29,21 +29,22 @@ console.log(mix([1, 2, 3, 4, 5]));
 // let _ = require("lodash");
 
 // function mix(arr) {
-//   const arrSort = arr.sort((a, b) => a - b);
+//   const arrSort = _.sortBy(arr);
+
 //   const arrA = [];
 //   const arrB = [];
 
-//   for (let i = 0; i < arrSort.length; i += 1) {
-//     if (i % 2 === 0) {
-//       arrA.push(arrSort[i]);
+//   _.each(arrSort, function (value, index) {
+//     if (index % 2 === 0) {
+//       arrA.push(value);
 //     } else {
-//       arrB.unshift(arrSort[i]);
+//       arrB.unshift(value);
 //     }
-//   }
+//   });
 
 //   const newArray = _.concat(arrA, arrB);
 
 //   return newArray;
 // }
 
-// console.log(mix([1, 2, 3, 4, 5]));
+// console.log(mix([1, 2, 3, -4, 5]));
